@@ -3,7 +3,7 @@ import './admin.scss';
 
 /* WordPress */
 import { render, createContext, useState } from '@wordpress/element';
-import { __, sprintf } from '@wordpress/i18n';
+import { __ } from '@wordpress/i18n';
 
 /* Library */
 import { pickBy, cloneDeep, isEmpty } from 'lodash';
@@ -124,11 +124,7 @@ const InitDatabaseSettings = (props) => {
 				}
 
 				if (attachment && attachment.ID) {
-					message.main = sprintf(
-						'Image "%s" (ID: %d) regen log: ',
-						attachment.post_title,
-						attachment.ID
-					);
+					message.attachment = attachment;
 				}
 
 				setNotices((prevNotices) => [...prevNotices, message]);

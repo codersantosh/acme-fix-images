@@ -2,7 +2,7 @@
 Contributors: acmethemes
 Donate link: http://www.acmethemes.com/
 Tags: fix image, resize image, image builder, hard crop
-Requires at least: 3.0
+Requires at least: 5.0
 Tested up to: 6.5
 Stable tag: 2.0.0
 License: GPLv2 or later
@@ -39,10 +39,19 @@ Acme Fix Images is developed to address image size issues, particularly after ad
 There are several reasons why you might need to regenerate thumbnails. These include switching themes, encountering issues with images not displaying correctly due to improper thumbnail sizes, and fixing image sizes after you have changed image sizes from Media Settings. Regenerating thumbnails ensures consistency and proper display of images across your website.
 
 
+== Screenshots ==
+
+1. Dashboard - Acme Fix Images
+2. Dashboard - Delete all old images sizes
+3. Dashboard - Featured Image Only and Post Types
+4. Dashboard - Image Regenerate Process
+5. Edit page - Image Regenerate Completed
+
+
 == Changelog ==
 
 = 2.0.0 =
-- Rewrite using [ATRC](https://github.com/codersantosh/atrc)
+- Rewrite using [ATRC](https://github.com/codersantosh/atrc) and [WP React Plugin Boilerplate](https://github.com/codersantosh/wp-react-plugin-boilerplate)
 - Added a few features
 - Added security and permissions
 

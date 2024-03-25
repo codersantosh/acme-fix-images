@@ -1,3 +1,65 @@
 @import '../prefix-vars.scss';
 @import '../mixins';
 @import '../../node_modules/atrc/build/index.css';
+
+#{$appPrefix} {
+    &-pnl-body {
+        #{$varPrefix}-m: 15px 0 0 0;
+
+        .at-pnl-row {
+            #{$varPrefix}-m: 0;
+            #{$varPrefix}-p: 20px;
+
+            &:nth-child(odd) {
+                background-color: #fff;
+            }
+        }
+    }
+
+    &-hr {
+        #{$varPrefix}-m: 15px 0;
+    }
+
+    &-txt-h5 {
+        #{$varPrefix}-m: 15px 0;
+    }
+
+    &-prog {
+        &-info {
+            #{$varPrefix}-bdr-sty: solid;
+            #{$varPrefix}-bdr-w: 1px;
+            #{$varPrefix}-bdr-cl: #d3d9de;
+            #{$varPrefix}-bg-cl: #f6f7f7;
+            #{$varPrefix}-p: 15px;
+        }
+
+        &-wrap {
+            #{$varPrefix}-m: 0 0 40px 0;
+
+            .at-txt-h3 {
+                #{$varPrefix}-m: 0 0 10px 0;
+            }
+        }
+    }
+
+    &-log {
+        &-ttl {
+            #{$varPrefix}-m: 0 0 15px 0;
+
+            .at-img {
+                #{$varPrefix}-max-w: 40px;
+                max-width: var(#{$varPrefix}-max-w);
+            }
+        }
+
+        .at-txt-h5 {
+            #{$varPrefix}-m: 0;
+        }
+
+        +#{$appPrefix} {
+            &-log {
+                #{$varPrefix}-m: 25px 0 0 0;
+            }
+        }
+    }
+}

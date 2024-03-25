@@ -1,5 +1,5 @@
 /* WordPress */
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import { useContext } from '@wordpress/element';
 
 /* Library */
@@ -17,7 +17,6 @@ import {
 	AtrcPrefix,
 	AtrcPanelBody,
 	AtrcPanelRow,
-	AtrcContent,
 	AtrcTitleTemplate2,
 	AtrcButtonSaveTemplate1,
 	AtrcControlSelectPostType,
@@ -25,6 +24,8 @@ import {
 	AtrcProgress,
 	AtrcWrap,
 	AtrcHr,
+	AtrcPreTemplate1,
+	AtrcImg,
 } from 'atrc';
 
 /* Inbuilt */
@@ -43,7 +44,7 @@ const MainContent = () => {
 	};
 
 	return (
-		<AtrcContent>
+		<AtrcWrap>
 			<AtrcPanelRow>
 				<AtrcControlToggle
 					label={__('Delete all old images sizes ', 'acme-fix-images')}
@@ -51,10 +52,10 @@ const MainContent = () => {
 					onChange={() => updateSettingKey('deleteOld', !deleteOld)}
 				/>
 			</AtrcPanelRow>
-			<AtrcHr className={classNames('at-m')} />
+			<AtrcHr className={classNames('at-m', 'afi-hr')} />
 			<AtrcText
-				tag='h6'
-				className={classNames('at-m')}>
+				tag='h5'
+				className={classNames('at-m', 'afi-txt-h5')}>
 				{__('Regenerate options:', 'acme-fix-images')}
 			</AtrcText>
 			<AtrcPanelRow>
@@ -97,9 +98,12 @@ const MainContent = () => {
 				<>
 					<AtrcPanelBody
 						title={__('Image sizes and crop', 'acme-fix-images')}
-						initialOpen={true}>
+						initialOpen={true}
+						className={classNames('at-m', 'afi-pnl-body')}>
 						{map(acmeFixImagesLocalize.img_sizes, (value, key) => (
-							<AtrcPanelRow key={`afi-img-size-${key}`}>
+							<AtrcPanelRow
+								key={`afi-img-size-${key}`}
+								className={classNames('at-p')}>
 								<AtrcControlToggle
 									label={`${value.name} (${value.width}x${value.height})`}
 									checked={resizeImg[key] && resizeImg[key].on}
@@ -117,31 +121,29 @@ const MainContent = () => {
 									}}
 								/>
 								{resizeImg[key] && resizeImg[key].on ? (
-									<AtrcPanelRow>
-										<AtrcControlToggle
-											label={__('Cropped', 'acme-fix-images')}
-											checked={resizeImg[key] && resizeImg[key].crop}
-											onChange={() => {
-												const clonedActiveImgSizes = cloneDeep(resizeImg);
-												if (!clonedActiveImgSizes[key]) {
-													clonedActiveImgSizes[key] = {};
-												}
-												if (clonedActiveImgSizes[key].crop) {
-													clonedActiveImgSizes[key].crop = false;
-												} else {
-													clonedActiveImgSizes[key].crop = true;
-												}
-												updateSettingKey('resizeImg', clonedActiveImgSizes);
-											}}
-										/>
-									</AtrcPanelRow>
+									<AtrcControlToggle
+										label={__('Cropped', 'acme-fix-images')}
+										checked={resizeImg[key] && resizeImg[key].crop}
+										onChange={() => {
+											const clonedActiveImgSizes = cloneDeep(resizeImg);
+											if (!clonedActiveImgSizes[key]) {
+												clonedActiveImgSizes[key] = {};
+											}
+											if (clonedActiveImgSizes[key].crop) {
+												clonedActiveImgSizes[key].crop = false;
+											} else {
+												clonedActiveImgSizes[key].crop = true;
+											}
+											updateSettingKey('resizeImg', clonedActiveImgSizes);
+										}}
+									/>
 								) : null}
 							</AtrcPanelRow>
 						))}
 					</AtrcPanelBody>
 				</>
 			) : null}
-		</AtrcContent>
+		</AtrcWrap>
 	);
 };
 
@@ -272,14 +274,14 @@ const Settings = () => {
 	return (
 		<AtrcWireFrameHeaderContentFooter
 			wrapProps={{
-				className: classNames(AtrcPrefix('bg-white'), 'at-bg-cl'),
+				allowContainer: true,
+				type: 'fluid',
 			}}
 			renderContent={
 				fiProgress ? null : (
 					<AtrcWireFrameContentSidebar
 						wrapProps={{
-							allowContainer: true,
-							type: 'fluid',
+							className: classNames(AtrcPrefix('bg-white'), 'at-bg-cl'),
 							tag: 'section',
 						}}
 						renderContent={<MainContent />}
@@ -298,85 +300,127 @@ const Settings = () => {
 					{fiProgress ? (
 						<>
 							{fiProgress !== 100 ? (
-								<AtrcNotice
-									isDismissible={false}
-									status='info'>
-									{__(
-										'Please remain patient as the thumbnails are being regenerated. Updates will be provided below as each image is processed.',
-										'acme-fix-images'
-									)}
-								</AtrcNotice>
+								<>
+									<AtrcNotice
+										isDismissible={false}
+										status='info'>
+										{__(
+											'Please remain patient as the thumbnails are being regenerated. Updates will be provided below as each image is processed.',
+											'acme-fix-images'
+										)}
+									</AtrcNotice>
+								</>
 							) : null}
 						</>
 					) : (
-						<AtrcNotice
-							isDismissible={false}
-							status='info'>
+						<AtrcText variant='help'>
 							{__(
 								'Be sure to backup your site before regenerate thumbnails.',
 								'acme-fix-images'
 							)}
-						</AtrcNotice>
+						</AtrcText>
 					)}
 					{fiProgress !== 100 ? (
-						<>
-							<AtrcButtonSaveTemplate1
-								isLoading={dbIsLoading}
-								canSave={true}
-								text={{
-									save: btnTxt,
-								}}
-								disabled={dbIsLoading}
-								onClick={() => fixImages(dbSettings)}
-							/>
-						</>
+						<AtrcButtonSaveTemplate1
+							isLoading={dbIsLoading}
+							canSave={true}
+							text={{
+								save: btnTxt,
+							}}
+							disabled={dbIsLoading}
+							onClick={() => fixImages(dbSettings)}
+						/>
 					) : null}
-
+					{fiProgress > 0 && fiProgress < 100 ? (
+						<AtrcHr className={classNames('at-m', 'afi-hr')} />
+					) : null}
 					{fiProgress ? (
-						<>
-							<AtrcText tag='h3'>
+						<AtrcWrap className={classNames('at-m', 'afi-prog-wrap')}>
+							<AtrcText
+								tag='h3'
+								className={classNames('at-m')}>
 								{__('Process details:', 'acme-fix-images')}
 							</AtrcText>
-							<AtrcText tag='p'>
-								{__('Total:', 'acme-fix-images') + attachmentData.countAllItems}
-							</AtrcText>
-							<AtrcText tag='p'>
-								{__('Processed:', 'acme-fix-images') + countProcess}
-							</AtrcText>
-							<AtrcProgress
-								style={{
-									'--at-bar-w': fiProgress + '%',
-								}}>
-								{parseInt(fiProgress) + '%'}
-							</AtrcProgress>
-						</>
+
+							<AtrcWrap
+								className={classNames(
+									'at-bdr',
+									'afi-prog-info',
+									'at-p',
+									'at-bg-cl'
+								)}>
+								<AtrcWrap
+									className={classNames(
+										'at-flx',
+										'at-al-itm-ctr',
+										'at-jfy-cont-btw'
+									)}>
+									<AtrcText tag='p'>
+										{__('Total:', 'acme-fix-images') +
+											attachmentData.countAllItems}
+									</AtrcText>
+									<AtrcText tag='p'>
+										{__('Processed:', 'acme-fix-images') + countProcess}
+									</AtrcText>
+								</AtrcWrap>
+								<AtrcProgress
+									className={classNames('at-bg-cl')}
+									style={{
+										'--at-bar-w': fiProgress + '%',
+										'--at-h': '20px',
+									}}>
+									{parseInt(fiProgress) + '%'}
+								</AtrcProgress>
+							</AtrcWrap>
+						</AtrcWrap>
 					) : null}
 
 					{/*Notice is common for settings*/}
 					{!isEmpty(fiNotices)
 						? map(fiNotices, (value, key) => (
-								<AtrcNotice isDismissible={false}>
-									<AtrcText tag='h5'>{value.main}</AtrcText>
+								<AtrcWrap className={classNames('at-m', 'afi-log')}>
+									<AtrcWrap
+										className={classNames(
+											'at-flx',
+											'at-al-itm-ctr',
+											'at-gap',
+											'at-m',
+											'afi-log-ttl'
+										)}>
+										<AtrcImg src={value.attachment.guid} />
+										<AtrcText
+											tag='h5'
+											className={classNames('at-m')}>
+											{sprintf(
+												'Image "%s" (ID: %d) regen log: ',
+												value.attachment.post_title,
+												value.attachment.ID
+											)}
+										</AtrcText>
+									</AtrcWrap>
 
 									{value.createdLog ? (
-										<AtrcWrap
+										<AtrcPreTemplate1
 											dangerouslySetInnerHTML={{
 												__html: value.createdLog.join('<br />'),
 											}}
 										/>
 									) : null}
 									{value.deletedLog ? (
-										<AtrcWrap
+										<AtrcPreTemplate1
 											dangerouslySetInnerHTML={{
 												__html: value.deletedLog.join('<br />'),
 											}}
 										/>
 									) : null}
-								</AtrcNotice>
+								</AtrcWrap>
 						  ))
 						: null}
 				</>
 			}
+			footerProps={{
+				className: classNames(AtrcPrefix('bg-white'), 'at-bg-cl'),
+			}}
 			allowHeaderRow={false}
 			allowHeaderCol={false}
 			allowContentRow={false}
