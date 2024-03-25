@@ -9,129 +9,121 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-24T07:59:54+00:00\n"
+"POT-Creation-Date: 2024-03-25T14:03:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: acme-fix-images\n"
 
-#: src/admin/components/organisms/admin-header.js:27
-msgid "Acme fix images"
-msgstr ""
-
-#: src/admin/components/organisms/admin-header.js:34
-msgid "Show all hidden informations, notices and documentations "
-msgstr ""
-
-#: src/admin/fix-images.js:122
-#: languages/translation-js.php:26
-msgid "Cropped"
-msgstr ""
-
-#: src/admin/fix-images.js:160
-#: languages/translation-js.php:27
-msgid "Documentation"
-msgstr ""
-
-#: src/admin/fix-images.js:182
-#: languages/translation-js.php:28
-msgid "What is the Acme Fix Images WordPress Plugin?"
-msgstr ""
-
-#: src/admin/fix-images.js:190
-#: languages/translation-js.php:29
-msgid "Acme Fix Images is a WordPress plugin designed to resolve issues related to thumbnail sizes for images uploaded to your Media Library. It allows you to regenerate all or selected thumbnail sizes for one or more images, ensuring they display correctly on your website."
-msgstr ""
-
-#: src/admin/fix-images.js:197
-#: languages/translation-js.php:30
-msgid "Why would I need to regenerate thumbnails?"
-msgstr ""
-
-#: src/admin/fix-images.js:205
-#: languages/translation-js.php:31
-msgid "There are several reasons why you might need to regenerate thumbnails. These include switching themes, encountering issues with images not displaying correctly due to improper thumbnail sizes, and fixing image sizes after you have changed image sizes from Media Settings. Regenerating thumbnails ensures consistency and proper display of images across your website."
-msgstr ""
-
-#: src/admin/fix-images.js:212
-#: languages/translation-js.php:32
-msgid "Is Acme Fix Images compatible with my WordPress theme?"
-msgstr ""
-
-#: src/admin/fix-images.js:220
-msgid "Acme Fix Images is designed to work with most WordPress themes. However, compatibility can vary depending on the specific features and functionality of your theme. It's always a good idea to test the plugin on a staging site or back up your website before making any significant changes."
-msgstr ""
-
-#: src/admin/fix-images.js:227
-#: languages/translation-js.php:33
-msgid "Does Acme Fix Images delete any media?"
-msgstr ""
-
-#: src/admin/fix-images.js:235
-#: languages/translation-js.php:34
-msgid "No, it does not delete any media. The plugin solely focuses on regenerating thumbnail sizes and does not involve deleting any media files from your WordPress Media Library."
-msgstr ""
-
-#: src/admin/fix-images.js:304
-#: languages/translation-js.php:35
-msgid "Please remain patient as the thumbnails are being regenerated. Updates will be provided below as each image is processed."
-msgstr ""
-
-#: src/admin/fix-images.js:315
-#: languages/translation-js.php:36
-msgid "Be sure to backup your site before regenerate thumbnails."
-msgstr ""
-
-#: src/admin/fix-images.js:338
-#: languages/translation-js.php:37
-msgid "Process details:"
-msgstr ""
-
-#: src/admin/fix-images.js:341
-#: languages/translation-js.php:38
-msgid "Total:"
-msgstr ""
-
-#: src/admin/fix-images.js:344
-#: languages/translation-js.php:39
-msgid "Processed:"
-msgstr ""
-
-#: src/admin/fix-images.js:49
-#: languages/translation-js.php:19
-msgid "Delete all old images sizes "
-msgstr ""
-
-#: src/admin/fix-images.js:58
-#: languages/translation-js.php:20
-msgid "Regenerate options:"
-msgstr ""
-
-#: src/admin/fix-images.js:62
-#: languages/translation-js.php:21
-msgid "Select images"
-msgstr ""
-
-#: src/admin/fix-images.js:70
-#: languages/translation-js.php:22
-msgid "All"
-msgstr ""
-
-#: src/admin/fix-images.js:74
-#: languages/translation-js.php:23
-msgid "Featured image only"
-msgstr ""
-
-#: src/admin/fix-images.js:84
-#: languages/translation-js.php:24
-msgid "Select post types"
-msgstr ""
-
-#: src/admin/fix-images.js:99
+#: src/admin/fix-images.js:100
 #: languages/translation-js.php:25
 msgid "Image sizes and crop"
 msgstr ""
 
-#: src/admin/routes.js:143
+#: src/admin/fix-images.js:125
+#: languages/translation-js.php:26
+msgid "Cropped"
+msgstr ""
+
+#: src/admin/fix-images.js:162
+#: languages/translation-js.php:27
+msgid "Documentation"
+msgstr ""
+
+#: src/admin/fix-images.js:184
+#: languages/translation-js.php:28
+msgid "What is the Acme Fix Images WordPress Plugin?"
+msgstr ""
+
+#: src/admin/fix-images.js:192
+#: languages/translation-js.php:29
+msgid "Acme Fix Images is a WordPress plugin designed to resolve issues related to thumbnail sizes for images uploaded to your Media Library. It allows you to regenerate all or selected thumbnail sizes for one or more images, ensuring they display correctly on your website."
+msgstr ""
+
+#: src/admin/fix-images.js:199
+#: languages/translation-js.php:30
+msgid "Why would I need to regenerate thumbnails?"
+msgstr ""
+
+#: src/admin/fix-images.js:207
+#: languages/translation-js.php:31
+msgid "There are several reasons why you might need to regenerate thumbnails. These include switching themes, encountering issues with images not displaying correctly due to improper thumbnail sizes, and fixing image sizes after you have changed image sizes from Media Settings. Regenerating thumbnails ensures consistency and proper display of images across your website."
+msgstr ""
+
+#: src/admin/fix-images.js:214
+#: languages/translation-js.php:32
+msgid "Is Acme Fix Images compatible with my WordPress theme?"
+msgstr ""
+
+#: src/admin/fix-images.js:222
+msgid "Acme Fix Images is designed to work with most WordPress themes. However, compatibility can vary depending on the specific features and functionality of your theme. It's always a good idea to test the plugin on a staging site or back up your website before making any significant changes."
+msgstr ""
+
+#: src/admin/fix-images.js:229
+#: languages/translation-js.php:33
+msgid "Does Acme Fix Images delete any media?"
+msgstr ""
+
+#: src/admin/fix-images.js:237
+#: languages/translation-js.php:34
+msgid "No, it does not delete any media. The plugin solely focuses on regenerating thumbnail sizes and does not involve deleting any media files from your WordPress Media Library."
+msgstr ""
+
+#: src/admin/fix-images.js:307
+#: languages/translation-js.php:35
+msgid "Please remain patient as the thumbnails are being regenerated. Updates will be provided below as each image is processed."
+msgstr ""
+
+#: src/admin/fix-images.js:317
+#: languages/translation-js.php:36
+msgid "Be sure to backup your site before regenerate thumbnails."
+msgstr ""
+
+#: src/admin/fix-images.js:342
+#: languages/translation-js.php:37
+msgid "Process details:"
+msgstr ""
+
+#: src/admin/fix-images.js:359
+#: languages/translation-js.php:38
+msgid "Total:"
+msgstr ""
+
+#: src/admin/fix-images.js:363
+#: languages/translation-js.php:39
+msgid "Processed:"
+msgstr ""
+
+#: src/admin/fix-images.js:50
+#: languages/translation-js.php:19
+msgid "Delete all old images sizes "
+msgstr ""
+
+#: src/admin/fix-images.js:59
+#: languages/translation-js.php:20
+msgid "Regenerate options:"
+msgstr ""
+
+#: src/admin/fix-images.js:63
+#: languages/translation-js.php:21
+msgid "Select images"
+msgstr ""
+
+#: src/admin/fix-images.js:71
+#: languages/translation-js.php:22
+msgid "All"
+msgstr ""
+
+#: src/admin/fix-images.js:75
+#: languages/translation-js.php:23
+msgid "Featured image only"
+msgstr ""
+
+#: src/admin/fix-images.js:85
+#: languages/translation-js.php:24
+msgid "Select post types"
+msgstr ""
+
+#: src/admin/routes.js:139
 #: languages/translation-js.php:40
 msgid "Error occurred while regenerating image:"
 msgstr ""

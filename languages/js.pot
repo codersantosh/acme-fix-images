@@ -3,27 +3,23 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/admin/components/organisms/admin-header.js:27
-msgid "Acme fix images"
+#: src/admin/fix-images.js:100
+msgid "Image sizes and crop"
 msgstr ""
 
-#: src/admin/components/organisms/admin-header.js:34
-msgid "Show all hidden informations, notices and documentations "
-msgstr ""
-
-#: src/admin/fix-images.js:122
+#: src/admin/fix-images.js:125
 msgid "Cropped"
 msgstr ""
 
-#: src/admin/fix-images.js:160
+#: src/admin/fix-images.js:162
 msgid "Documentation"
 msgstr ""
 
-#: src/admin/fix-images.js:182
+#: src/admin/fix-images.js:184
 msgid "What is the Acme Fix Images WordPress Plugin?"
 msgstr ""
 
-#: src/admin/fix-images.js:190
+#: src/admin/fix-images.js:192
 msgid ""
 "Acme Fix Images is a WordPress plugin designed to resolve issues related to "
 "thumbnail sizes for images uploaded to your Media Library. It allows you to "
@@ -31,11 +27,11 @@ msgid ""
 "they display correctly on your website."
 msgstr ""
 
-#: src/admin/fix-images.js:197
+#: src/admin/fix-images.js:199
 msgid "Why would I need to regenerate thumbnails?"
 msgstr ""
 
-#: src/admin/fix-images.js:205
+#: src/admin/fix-images.js:207
 msgid ""
 "There are several reasons why you might need to regenerate thumbnails. "
 "These include switching themes, encountering issues with images not "
@@ -45,11 +41,11 @@ msgid ""
 "website."
 msgstr ""
 
-#: src/admin/fix-images.js:212
+#: src/admin/fix-images.js:214
 msgid "Is Acme Fix Images compatible with my WordPress theme?"
 msgstr ""
 
-#: src/admin/fix-images.js:220
+#: src/admin/fix-images.js:222
 msgid ""
 "Acme Fix Images is designed to work with most WordPress themes. However, "
 "compatibility can vary depending on the specific features and functionality "
@@ -57,68 +53,64 @@ msgid ""
 "or back up your website before making any significant changes."
 msgstr ""
 
-#: src/admin/fix-images.js:227
+#: src/admin/fix-images.js:229
 msgid "Does Acme Fix Images delete any media?"
 msgstr ""
 
-#: src/admin/fix-images.js:235
+#: src/admin/fix-images.js:237
 msgid ""
 "No, it does not delete any media. The plugin solely focuses on regenerating "
 "thumbnail sizes and does not involve deleting any media files from your "
 "WordPress Media Library."
 msgstr ""
 
-#: src/admin/fix-images.js:304
+#: src/admin/fix-images.js:307
 msgid ""
 "Please remain patient as the thumbnails are being regenerated. Updates will "
 "be provided below as each image is processed."
 msgstr ""
 
-#: src/admin/fix-images.js:315
+#: src/admin/fix-images.js:317
 msgid "Be sure to backup your site before regenerate thumbnails."
 msgstr ""
 
-#: src/admin/fix-images.js:338
+#: src/admin/fix-images.js:342
 msgid "Process details:"
 msgstr ""
 
-#: src/admin/fix-images.js:341
+#: src/admin/fix-images.js:359
 msgid "Total:"
 msgstr ""
 
-#: src/admin/fix-images.js:344
+#: src/admin/fix-images.js:363
 msgid "Processed:"
 msgstr ""
 
-#: src/admin/fix-images.js:49
+#: src/admin/fix-images.js:50
 msgid "Delete all old images sizes "
 msgstr ""
 
-#: src/admin/fix-images.js:58
+#: src/admin/fix-images.js:59
 msgid "Regenerate options:"
 msgstr ""
 
-#: src/admin/fix-images.js:62
+#: src/admin/fix-images.js:63
 msgid "Select images"
 msgstr ""
 
-#: src/admin/fix-images.js:70
+#: src/admin/fix-images.js:71
 msgid "All"
 msgstr ""
 
-#: src/admin/fix-images.js:74
+#: src/admin/fix-images.js:75
 msgid "Featured image only"
 msgstr ""
 
-#: src/admin/fix-images.js:84
+#: src/admin/fix-images.js:85
 msgid "Select post types"
 msgstr ""
 
-#: src/admin/fix-images.js:99
-msgid "Image sizes and crop"
-msgstr ""
-
-#: src/admin/routes.js:143
+#: src/admin/routes.js:139
 msgid "Error occurred while regenerating image:"
 msgstr ""
 
