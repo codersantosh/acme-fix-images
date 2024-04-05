@@ -50,7 +50,7 @@ There are several reasons why you might need to regenerate thumbnails. These inc
 
 == Changelog ==
 
-= 2.0.0 =
+= 2.0.1 =
 - Updated: readme and info
 
 = 2.0.0 =
