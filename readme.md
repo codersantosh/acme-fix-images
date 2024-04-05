@@ -1,10 +1,10 @@
-# Acme Fix Images
+# Regenerate Thumbnails - Acme Fix Images
 
 > Fix image sizes after you have changed image sizes from Media Settings. Ensure your images display consistently across your website.
 
 ## Description
 
-Acme Fix Images is a handy WordPress plugin designed to resolve issues related to image thumbnail sizes. If you've recently adjusted image sizes in your Media Settings or encountered display problems due to improper thumbnail sizes, this plugin can help you ensure consistency and proper display of images across your website.
+Regenerate Thumbnails - Acme Fix Images is a handy WordPress plugin designed to resolve issues related to image thumbnail sizes. If you've recently adjusted image sizes in your Media Settings or encountered display problems due to improper thumbnail sizes, this plugin can help you ensure consistency and proper display of images across your website.
 
 ## Table of contents
 
@@ -35,7 +35,7 @@ After installation, activate the plugin through the 'Plugins' menu in WordPress.
 
 ## Usage
 
-Now that you have the 'Acme Fix Images' plugin installed, you can use its features for:
+Now that you have the 'Regenerate Thumbnails - Acme Fix Images' plugin installed, you can use its features for:
 
 - Log in to your WordPress admin panel.
 - Navigate to Appearance => Acme Fix Images.
