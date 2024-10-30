@@ -3,6 +3,14 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
+#: src/admin/components/organisms/admin-header.js:27
+msgid "Acme fix images"
+msgstr ""
+
+#: src/admin/components/organisms/admin-header.js:34
+msgid "Show all hidden informations, notices and documentations "
+msgstr ""
+
 #: src/admin/fix-images.js:100
 msgid "Image sizes and crop"
 msgstr ""
@@ -110,7 +118,7 @@ msgstr ""
 msgid "Select post types"
 msgstr ""
 
-#: src/admin/routes.js:139
+#: src/admin/routes.js:144
 msgid "Error occurred while regenerating image:"
 msgstr ""
 

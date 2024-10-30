@@ -13,7 +13,8 @@
 		"replace": "node .bin/replace-texts.js",
 		"makejsstring": "node .bin/make-string.js",
 		"makepot": "wp i18n make-pot . languages/acme-fix-images.pot --skip-js --exclude=src,vendor,node_modules --merge=languages/js.pot",
-		"deploy": "npm-run-all build replace makejsstring makepot copy"
+		"deploy": "npm-run-all build replace makejsstring makepot copy",
+		"packages-update": "wp-scripts packages-update"
 	},
 	"browserslist": [
 		"last 3 versions",
@@ -24,10 +25,10 @@
 		"classnames": "^2.5.1"
 	},
 	"devDependencies": {
-		"@wordpress/babel-plugin-makepot": "^5.34.0",
-		"@wordpress/babel-preset-default": "^7.34.0",
-		"@wordpress/i18n": "^4.50.0",
-		"@wordpress/scripts": "27.1.0",
+		"@wordpress/babel-plugin-makepot": "^6.10.0",
+		"@wordpress/babel-preset-default": "^8.10.0",
+		"@wordpress/i18n": "^5.10.0",
+		"@wordpress/scripts": "^30.3.0",
 		"autoprefixer": "^10.4.17",
 		"babel-cli": "^6.26.0",
 		"ncp": "^2.0.0",

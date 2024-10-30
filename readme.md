@@ -1,4 +1,4 @@
-# Regenerate Thumbnails - Acme Fix Images
+# Acme Fix Images - Regenerate Thumbnails
 
 > Fix image sizes after you have changed image sizes from Media Settings. Ensure your images display consistently across your website.
 

@@ -1,10 +1,10 @@
-=== Regenerate Thumbnails - Acme Fix Images ===
+=== Acme Fix Images - Regenerate Thumbnails ===
 Contributors: acmethemes, codersantosh
 Donate link: http://www.acmethemes.com/
 Tags: regenerate-thumbnails, post-thumbnails, featured images, image crop
 Requires at least: 5.0
-Tested up to: 6.5
-Stable tag: 2.0.1
+Tested up to: 6.7
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,7 +38,6 @@ Regenerate Thumbnails - Acme Fix Images is developed to address image size issue
 
 There are several reasons why you might need to regenerate thumbnails. These include switching themes, encountering issues with images not displaying correctly due to improper thumbnail sizes, and fixing image sizes after you have changed image sizes from Media Settings. Regenerating thumbnails ensures consistency and proper display of images across your website.
 
-
 == Screenshots ==
 
 1. Dashboard - Acme Fix Images
@@ -49,6 +48,20 @@ There are several reasons why you might need to regenerate thumbnails. These inc
 
 
 == Changelog ==
+
+= 2.0.3 =
+* Added: Tested with the latest WordPress
+* Added: RTL support
+* Updated: Contributors
+* Updated: [Atomic CSS](https://github.com/codersantosh/atomic-css)
+* Updated: npm packages
+* Fixed: Admin Notices Hidden by Sticky Header on Plugin Settings Page
+
+
+= 2.0.2 =
+- Added: Plugin Settings menu.
+- Updated: Limited image information to a maximum of 100, with the latest appearing first.
+- Fixed: Resolved async/await JavaScript issues by reverting to an earlier version of wp-scripts.
 
 = 2.0.1 =
 - Updated: readme and info

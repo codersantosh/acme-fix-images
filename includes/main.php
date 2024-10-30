@@ -99,7 +99,6 @@ class Acme_Fix_Images {
 		require_once ACME_FIX_IMAGES_PATH . 'admin/class-admin.php';
 
 		$this->loader = new Acme_Fix_Images_Loader();
-
 	}
 
 	/**
@@ -116,7 +115,6 @@ class Acme_Fix_Images {
 		$plugin_i18n = new Acme_Fix_Images_I18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
 	}
 
 	/**
@@ -132,7 +130,6 @@ class Acme_Fix_Images {
 
 		/* Register scripts and styles */
 		$this->loader->add_action( 'init', $plugin_include, 'register_scripts_and_styles' );
-
 	}
 
 	/**
@@ -147,9 +144,12 @@ class Acme_Fix_Images {
 		$plugin_admin = acme_fix_images_admin();
 
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_admin_menu' );
+		$this->loader->add_filter( 'admin_body_class', $plugin_admin, 'add_has_sticky_header' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_resources' );
 		$this->loader->add_filter( 'attachment_fields_to_edit', $plugin_admin, 'fix_image_single', 10, 2 );
 
+		/* https://developer.wordpress.org/reference/hooks/plugin_action_links_plugin_file/ */
+		$this->loader->add_filter( 'plugin_action_links_acme-fix-images/acme-fix-images.php', $plugin_admin, 'add_plugin_links', 10, 4 );
 	}
 
 	/**
