@@ -55,8 +55,6 @@ class Acme_Fix_Images_Include {
 		// Only run these methods if they haven't been ran previously.
 		if ( null === $instance ) {
 			/* Query only once */
-			self::$white_label = acme_fix_images_get_white_label();
-
 			$instance = new self();
 		}
 
@@ -71,6 +69,9 @@ class Acme_Fix_Images_Include {
 	 * @return array|null
 	 */
 	public function get_white_label() {
+		if ( null === self::$white_label ) {
+			self::$white_label = acme_fix_images_get_white_label();
+		}
 		return self::$white_label;
 	}
 

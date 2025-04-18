@@ -3,8 +3,8 @@ Contributors: acmethemes, codersantosh
 Donate link: http://www.acmethemes.com/
 Tags: regenerate-thumbnails, post-thumbnails, featured images, image crop
 Requires at least: 5.0
-Tested up to: 6.7
-Stable tag: 2.0.3
+Tested up to: 6.8
+Stable tag: 2.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,6 +48,10 @@ There are several reasons why you might need to regenerate thumbnails. These inc
 
 
 == Changelog ==
+
+= 2.0.4 =
+* Added: WordPress latest compatibility
+* Fixed: Resolved issue with translation function preload
 
 = 2.0.3 =
 * Added: Tested with the latest WordPress
